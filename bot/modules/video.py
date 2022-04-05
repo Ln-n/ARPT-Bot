@@ -63,6 +63,7 @@ class Download_video():
                 'quiet': True,
                 'no_warnings': True,
                 'noplaylist': True,
+                'cookiefile': '/cookie.txt',
                 'progress_hooks': [self.download_video_status]
             }
 
@@ -131,7 +132,7 @@ def get_video_info(client, message, url):
 
         sys.stdout.flush()
         ydl_opts = {
-
+            'cookiefile': '/cookie.txt',
             'noplaylist': "True",
             'force-ipv4': 'True'
 
