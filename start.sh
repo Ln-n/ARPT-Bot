@@ -20,12 +20,12 @@ chmod 0777 /tracker.sh
 rm -rf /bot
 git clone https://github.com/Ln-n/ARPT-Bot.git
 mkdir /bot/
-mv /ARPT-Bot/bot/* /bot/
+cp /ARPT-Bot/bot/* /bot/
 
 rm /etc/nginx/nginx.conf
 cp /ARPT-Bot/root/nginx.conf /etc/nginx/
 
-rm -rf /ARPT-Bot
+
 
 #python3 /bot/nginx.py
 nginx -c /etc/nginx/nginx.conf
